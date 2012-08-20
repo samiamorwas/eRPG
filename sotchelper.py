@@ -135,7 +135,7 @@ class Register(Handler):
 					error_msg = "Username is already in use."
 					have_error = True
 					
-		if not valid_password:
+		if not valid_password(password):
 			error_msg = "Password must be between 3 and 20 characters."
 			have_error = True
 			
