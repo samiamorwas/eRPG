@@ -1,0 +1,65 @@
+.content {
+	background-color: white;
+	border: 5px groove black;
+	padding: 3px;
+	width: 700px;
+	margin: 0 auto;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0 auto;
+	padding: 90px;
+	background-image: url('backgrounds/sotc.png');
+	background-repeat: repeat;
+	background-position: top left;
+	background-color: white;
+}
+
+.roller {
+	background-color: white;
+	border: 1px groove black;
+	padding: 3px;
+	width: 300px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+}
+
+.label {
+	display: block;
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+}
+
+input[type=text] {
+	width: 250px;
+	font-size: 20px;
+	padding: 2px;
+}
+
+input[type=submit] {
+	font-size: 24px;
+}
+
+input[type=checkbox] {
+	width: 20px;
+}
+
+.roll-line {
+	margin: 20px auto;
+	color: black;
+	background-color: black;
+	height: 3px;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+}

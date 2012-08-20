@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Roller Helper{% endblock %}
+{% block head %}
+{{super()}}
+<style type="text/css">
+	.fate {width: 20px}
+</style>
+{% endblock %}
+{% block content %}
+<form method="post" class="roller">			
+	<label>
+		<pre>roll:{{sign}}{{roll}}</pre>
+		<input type="submit" value="roll">
+	</label>
+			
+	<hr class="roll-line">
+	
+	<label>
+		<div>fate points:</div>
+		<input class="fate" type="text" name="fp" value="{{fp}}">
+	</label>
+	
+	<hr class="roll-line">
+			
+	<label>
+		<input type="checkbox" name="h1" value="checked" {{h1c}}>
+		<input type="checkbox" name="h2" value="checked" {{h2c}}>
+		<input type="checkbox" name="h3" value="checked" {{h3c}}>
+		<input type="checkbox" name="h4" value="checked" {{h4c}}>
+		<input type="checkbox" name="h5" value="checked" {{h5c}}>
+		<input type="checkbox" name="h6" value="checked" {{h6c}}>
+		<input type="checkbox" name="h7" value="checked" {{h7c}}>
+		<input type="checkbox" name="h8" value="checked" {{h8c}}>
+		<input type="checkbox" name="h9" value="checked" {{h9c}}>
+			
+		<div>health</div>
+	</label>
+			
+	<br>
+			
+	<label>
+		<input type="checkbox" name="c1" value="checked" {{c1c}}>
+		<input type="checkbox" name="c2" value="checked" {{c2c}}>
+		<input type="checkbox" name="c3" value="checked" {{c3c}}>
+		<input type="checkbox" name="c4" value="checked" {{c4c}}>
+		<input type="checkbox" name="c5" value="checked" {{c5c}}>
+		<input type="checkbox" name="c6" value="checked" {{c6c}}>
+		<input type="checkbox" name="c7" value="checked" {{c7c}}>
+		<input type="checkbox" name="c8" value="checked" {{c8c}}>
+		<input type="checkbox" name="c9" value="checked" {{c9c}}>
+
+		<div>composure</div>
+	</label>
+			
+	<br>
+			
+	<label>
+		<div>mild</div>
+		<input type="text" name="mild" value="{{mild}}">
+	</label>
+			
+	<label>
+		<div>moderate</div>
+		<input type="text" name="moderate" value="{{moderate}}">
+	</label>
+			
+	<label>
+		<div>severe</div>
+		<input type="text" name="severe" value="{{severe}}">
+	</label>
+	
+</form>
+{% endblock %}

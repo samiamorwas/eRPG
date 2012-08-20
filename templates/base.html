@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		{% block head %}
+		<link rel="stylesheet" type="text/css" href="static/css/main.css" />
+		<title>{% block title %}{% endblock %} - eRPG</title>
+		{% endblock %}
+	</head>
+	
+	<body>
+		<div class="content">{% block content %}{% endblock %}</div>
+		<div id="footer">
+			{% block footer %}
+			&copy; Copyright 2012 by Max Haarhaus
+			{% endblock %}
+		</div>
+	</body>
+</html>
