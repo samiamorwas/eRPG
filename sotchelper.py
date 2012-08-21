@@ -154,7 +154,33 @@ class Register(Handler):
 			
 			self.response.headers.add_header('Set-Cookie', 'user_id=%s; Path=/' % username)
 			self.redirect('/')
+			
+class Login(Handler):
+	"""This class handles users logging in to the site."""
+	
+	def get(self):
+		self.render('login.html')
+		
+	def post(self):
+		"""Check if the username and password are valid, and log in."""
+		
+		users = db.GqlQuery("select * from User order by created desc")
+		username = self.request.get('username')
+		password = self.request.get('password')
+		have_error = True
+		
+		for user in users:
+			if user.username == username and user.password == password:
+				have_error = False
+		# Fix adding a header
+		if have_error:
+			self.render('login.html', error_msg="Incorrect username and/or password.")
+		else:
+			username = str(username)
+			self.response.headers.add_header('Set_Cookie', 'user_id=%s; Path=/' % username)
+			self.redirect('/')
 
 app = webapp2.WSGIApplication([('/roller', Roller),
 								('/register', Register),
+								('/login', Login),
 								('/', MainPage)], debug = True)
